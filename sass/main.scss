@@ -1,6 +1,11 @@
 //base
 @import './base/reset';
 
+//utils
+@import './utils/variables';
+@import './utils/visualy-hidden';
+@import './utils/mixin';
+
 //components
 @import './components/header';
 @import './components/logo';
@@ -27,8 +32,6 @@
 
 //themes
 
-//utils
-@import './utils/variables';
-@import './utils/visualy-hidden';
+
 
 //vendors
