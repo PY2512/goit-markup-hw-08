@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"/>
-    <link rel="stylesheet" href="./css/styles.css"/>
+    
     <link rel="stylesheet" href="./css/main.min.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"/>
     <link rel="stylesheet"
@@ -20,8 +20,8 @@
 <body>
     <!--header-->
     <header class="header">
-        <div class="header-container container">
-            <nav class="header-nav">
+        <div class="container header-container">
+            <nav class="header-nav" aria-label="Header">
                 <a href="index.html" class="logo link"> 
                 <span class="web">Web</span><span class="second-web">Studio</span></a>
                 <!--menu navigation-->
@@ -37,6 +37,61 @@
                     </li>
                 </ul>
             </nav>
+
+                    <!-- mobile menu -->
+        <button class="mobile__button" data-menu-open>
+            <svg class="mobile__icon">
+                <use href="./icons.svg#icon-menu-open"></use>
+            </svg>
+            </button>
+            <div class="mobile__menu" data-menu>
+            <button class="mobile__close-btn" data-menu-close>
+                <svg class="mobile__close-btn-icon">
+                <use href="./icons.svg#icon-menu-close"></use>
+                </svg>
+            </button>
+            <div class="mobile-container">
+                <div class="mobile">
+                <ul class="mobile-menu__nav list">
+                    <li class="mobile-menu__nav-item">
+                    <a class="mobile-menu__nav-link mobile-menu__nav-link--current" href="./index.html">Студия</a>
+                    </li>
+                    <li class="mobile-menu__nav-item">
+                    <a class="mobile-menu__nav-link" href="./portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="mobile-menu__nav-item">
+                    <a class="mobile-menu__nav-link" href="#">Контакты</a>
+                    </li>
+                </ul>
+                </div>
+                <div class="mobile">
+                <ul class="mobile-menu__contacts list">
+                    <li class="mobile-menu__contacts-item">
+                    <a class="mobile-menu__contacts-link" href="tel:+380961111111">+38 096 111 11 11</a>
+                    </li>
+                    <li class="mobile-menu__contacts-item">
+                    <a class="mobile-menu__contacts-link mobile-menu__contacts-link--mail"
+                        href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="social-mobile list">
+                    <li class="social-mobile__item">
+                    <a class="social-mobile__link" href="#">Instagram</a>
+                    </li>
+                    <li class="social-mobile__item">
+                    <a class="social-mobile__link" href="#">Twitter</a>
+                    </li>
+                    <li class="social-mobile__item">
+                    <a class="social-mobile__link" href="#">Facebook</a>
+                    </li>
+                    <li class="social-mobile__item">
+                    <a class="social-mobile__link" href="#">Linkedin</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+
             <!--high line-->
             <div class="header-conect">
                 <ul class="contacts list">
@@ -61,16 +116,15 @@
         </div>
     </header>
 <main>
-    <!--Hero-->
-    <section class="hero">
-        <div class="hero__container">
-            <h1 class="hero__title hero__after-title">
-                Эффективные решения для вашего бизнеса</h1>
+    <!-- Hero -->
+    <section class="hero-top">
+        <div class="container">
+            <h1 class="hero-title hero-after-title">Эффективные решения для вашего бизнеса</h1>
                 <button class="btn hero__btn pointer animate__animated animate__pulse" data-modal-open type="button">
                 Заказать услугу</button>
         </div>
     </section>
-    <section class="section-two">
+    <!-- <section class="section-two">
         <div class="container section-two-container">
             <ul class="section-two__list list">
                 <li class="section-two__item icon-antena">
@@ -113,9 +167,9 @@
         </div>
         
     </section>
-    <section class="section-three">
+    <section class="section-three"> -->
         <!--Чем мы занимаемся-->
-        <div class="container section-three-container">
+        <!-- <div class="container section-three-container">
             <h2 class="section-three__title">Чем мы занимаемся</h2>
         <ul class="section-three__list list">
             <li class="section-three__item">
@@ -152,10 +206,10 @@
         </ul>
         </div>
         
-    </section>
-    <section class="team">
+    </section> -->
+    <!-- <section class="team"> -->
         <!--Наша команда-->
-        <div class="container">
+        <!-- <div class="container">
             <h2 class="team__title">Наша команда</h2>
             <ul class="team__list list">
                 <li class="team__item">
@@ -335,9 +389,9 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </section> -->
     <!-- regular customers -->
-    <section class="regular-customers">
+    <!-- <section class="regular-customers">
         <div class="container clients-container">
             <h2 class="team__title">Постоянные клиенты</h2>
             <ul class="clients-list list clients-after-list">
@@ -385,9 +439,9 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </section> -->
 </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="footer-container container">
             <div class="footer-one">
                 <a href="index.html" 
@@ -442,7 +496,7 @@
                 </ul>
             </div>
             <!-- FOOTER SUBSCRIBE -->
-            <div class="subscribe-footer">
+            <!-- <div class="subscribe-footer">
                 <h3 class="subscribe-footer__title">Подпишитесь на рассылку</h3>
                 <div class="subscribe-footer__section">
                     <form class="subscribe-footer__form" name="e-mail">
@@ -469,11 +523,11 @@
                 </div>
             </div>
         </div>
-        </footer>
+        </footer> --> -->
         <!-- MODAL WINDOV -->
-        <div class="backdrop is-hidden center" data-modal>
-            <div class="modal">
-                <button 
+        <!-- <div class="backdrop is-hidden center" data-modal>
+            <div class="modal"> -->
+                <!-- <button 
                 type="button"
                 class="modal__close-btn" 
                 data-modal-close>
@@ -549,7 +603,8 @@
                         Отправить
                     </button>
                 </div>
-            </div>
+            </div> -->
         <script src="./js/modal.js"></script>
+        <script src="./js/mob-menu.js"></script>
     </body>
 </html>

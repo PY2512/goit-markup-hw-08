@@ -76,14 +76,28 @@ body {
 }
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16 px;
   border-bottom: 1px solid #ececec;
   background-color: #ffffff;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 3;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 .header-mail:hover, .header-mail:focus, .header-tel:hover, .header-tel:focus {
@@ -116,6 +130,12 @@ body {
 
 .header-nav__item:not(:last-child) {
   margin-right: 50px;
+}
+
+@media (max-width: 767.98px) {
+  .header-nav__item:not(:last-child) {
+    display: none;
+  }
 }
 
 .header-nav__link {
@@ -178,11 +198,11 @@ body {
   cursor: default;
 }
 
-.header-nav__list,
-.contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media (max-width: 767.98px) {
+  .header-nav__list,
+  .contacts {
+    display: none;
+  }
 }
 
 .address-icon {
