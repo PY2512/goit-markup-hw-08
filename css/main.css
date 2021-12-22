@@ -1170,6 +1170,40 @@ img {
   background-color: #c4c4c4;
 }
 
+@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero-top {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/imgsite/mobile/Header-img@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-top {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/imgsite/tablet/Header-img-tab@1x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero-top {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/imgsite/tablet/Header-img-tab@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-top {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/imgsite/desktop/Img-hero-dt@1x.jpg);
+    height: 600px;
+    max-width: 1600px;
+    padding-bottom: 200px;
+    padding-top: 110px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero-top {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/imgsite/desktop/Img-hero-dt@2x.jpg);
+  }
+}
+
 @media screen and (min-width: 360px) {
   .hero-title {
     font-style: normal;
