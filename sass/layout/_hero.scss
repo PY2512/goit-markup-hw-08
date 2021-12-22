@@ -11,30 +11,30 @@
     height: 400px;
     background-color: #c4c4c4;
     
-    @include mq(retina) {
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(../../images/imgsite/mobile/Header-img@2x.jpg);
-    }
-    @include mq(tablet) {
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(../../images/imgsite/tablet/Header-img-tab@1x.jpg);
-        @include mq(retina) {
-            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                url(../../images/imgsite/tablet/Header-img-tab@2x.jpg);
-        }
-    }
-    @include mq(desktop) {
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(../../images/imgsite/desktop/Img-hero-dt@1x.jpg);
-        @include mq(retina) {
-            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                url(../../images/imgsite/desktop/Img-hero-dt@2x.jpg);
-        }
-        height: 600px;
-        max-width: 1600px;
-        padding-bottom: 200px;
-        padding-top: 110px;
-    }
+    // @include mq(retina) {
+    //     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    //         url(../../images/imgsite/mobile/Header-img@2x.jpg);
+    // }
+    // @include mq(tablet) {
+    //     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    //         url(../../images/imgsite/tablet/Header-img-tab@1x.jpg);
+    //     @include mq(retina) {
+    //         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    //             url(../../images/imgsite/tablet/Header-img-tab@2x.jpg);
+    //     }
+    // }
+    // @include mq(desktop) {
+    //     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    //         url(../../images/imgsite/desktop/Img-hero-dt@1x.jpg);
+    //     @include mq(retina) {
+    //         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    //             url(../../images/imgsite/desktop/Img-hero-dt@2x.jpg);
+    //     }
+    //     height: 600px;
+    //     max-width: 1600px;
+    //     padding-bottom: 200px;
+    //     padding-top: 110px;
+    // }
 }
 
 .hero-title {
