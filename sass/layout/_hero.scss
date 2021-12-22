@@ -3,13 +3,14 @@
     padding-bottom: 118px;
     margin-left: auto;
     margin-right: auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../images/imgsite/mobile/Header-img1x.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
     background-color: #c4c4c4;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../../images/imgsite/mobile/Header-img1x.jpg);
+    
     @include mq(retina) {
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
             url(../../images/imgsite/mobile/Header-img@2x.jpg);
