@@ -18,11 +18,10 @@
 <body>
 <!--header-->
 <header class="header">
-    <div class="header-container container">
-            <a href="index.html" class="logo link"> 
-            <span class="web">Web</span><span class="second-web">Studio</span></a>
-            <!--menu navigation-->
-        <nav class="header-nav">
+    <div class="container header-container">
+        <nav class="header-nav" aria-label="Header">
+            <a href="./index.html" class="header-nav__logo">Web<span
+                    class="header-nav__logo header-nav__logo--black">Studio</span></a>
             <ul class="header-nav__list list">
                 <li class="header-nav__item">
                     <a class="header-nav__link link" href="index.html">Студия</a>
@@ -35,26 +34,87 @@
                 </li>
             </ul>
         </nav>
-        <!--high line-->
-        <div class="header-conect">
-            <ul class="contacts list">
-            <li class="header-nav__item">
-                <a class="header-nav__link header-nav__link-color header-mail link" 
-                href="mailto:info@devstudio.com">
-                <svg class="address-icon" width="16px" height="12px">
-                    <use href="./icons.svg#icon-envelope"></use>
+        <!-- mobile button -->
+        <button class="mobile__button" data-menu-open>
+            <svg class="mobile__icon">
+                <use href="./icons.svg#icon-menu-open"></use>
+            </svg>
+        </button>
+        <!-- end of mobile button -->
+        <!-- mobile menu -->
+        <div class="mobile__menu" data-menu>
+            <button class="mobile__close-btn" data-menu-close>
+                <svg class="mobile__close-btn-icon">
+                    <use href="./icons.svg#icon-menu-close" width="19" height="19">
+                    </use>
                 </svg>
-                info@devstudio.com</a>
-            </li>
-            <li class="header-nav__item">
-                <a class="header-nav__link header-nav__link-color header-tel link" 
-                href="tel:+380961111111">
-                <svg class="address-icon header-tel" width="10px" height="16px">
-                    <use href="./icons.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a>
-            </li>
-        </ul>
+            </button>
+            <div class="mobile-container">
+                <div class="mobile">
+                    <ul class="mobile-menu__nav list">
+                        <li class="mobile-menu__nav-item">
+                            <a class="mobile-menu__nav-link mobile-menu__nav-link--current"
+                                href="./index.html">Студия</a>
+                        </li>
+                        <li class="mobile-menu__nav-item">
+                            <a class="mobile-menu__nav-link" href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="mobile-menu__nav-item">
+                            <a class="mobile-menu__nav-link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobile">
+                    <ul class="mobile-menu__contacts list">
+                        <li class="mobile-menu__contacts-item">
+                            <a class="mobile-menu__contacts-link" href="tel:+380961111111">+38 096 111 11 11</a>
+                        </li>
+                        <li class="mobile-menu__contacts-item">
+                            <a class="mobile-menu__contacts-link mobile-menu__contacts-link--mail"
+                                href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="social-mobile list">
+                        <li class="social-mobile__item">
+                            <a class="social-mobile__link" href="#">Instagram</a>
+                        </li>
+                        <li class="social-mobile__item">
+                            <a class="social-mobile__link" href="#">Twitter</a>
+                        </li>
+                        <li class="social-mobile__item">
+                            <a class="social-mobile__link" href="#">Facebook</a>
+                        </li>
+                        <li class="social-mobile__item">
+                            <a class="social-mobile__link" href="#">Linkedin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end of mobile menu -->
+        <div class="header-connect">
+            <ul class="header-connect__list list">
+                <li class="header-connect__item">
+                    <a class="header-connect__link header-connect__link-color header-connect__mail link"
+                        href="mailto:info@devstudio.com">
+                        <svg class="address-icon header-connect__mail header-connect--envelope" width="16px"
+                            height="12px">
+                            <use href="./icons.svg#icon-envelope"></use>
+                        </svg>
+                        info@devstudio.com
+                    </a>
+                </li>
+                <li class="header-connect__item">
+                    <a class="header-connect__link header-connect__link-color header-connect__tel link"
+                        href="tel:+380961111111">
+                        <svg class="address-icon header-connect__tel header-connect--telephone" width="10"
+                            height="16">
+                            <use href="./icons.svg#icon-smartphone"></use>
+                        </svg>
+                        +38 096 111 11 11
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </header>
@@ -84,11 +144,19 @@
                 <li class="projects-items">
                     <div class="box">
                         <p class="overlay">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-                        <img
-                        class="projects-img"
-                        src="./images/imgportpholio/project1.jpg"
-                        alt="Технокряк"
-                        width="370"/>
+                            <picture>
+                                <source srcset="./images/imgportpholio/desktop/dt@1x.jpg    1x,
+                                ./images/imgportpholio/desktop/dt@2x.jpg 2x
+                                    " media="(min-width:1200px)" type="image/jpg" />
+                                <source srcset="./images/imgportpholio/tablet/tb@1x.jpg    1x,
+                                ./images/imgportpholio/tablet/tb@2x.jpg 2x
+                                    " media="(min-width:768px)" type="image/jpg" />
+                                <source srcset="./images/imgportpholio/mobile/mb@1x.jpg    1x,
+                                ./images/imgportpholio/mobile/mb@2x.jpg 2x
+                                    " media="(max-width:767px)" type="image/jpg" />
+                                <img src="./images/imgportpholio/mobile/mb@1x.jpg" alt="UI Designer" width="450"
+                                    height="294" loading="lazy" />
+                            </picture>
                     </div>
                     <div class="projects-items__description">
                         <h3 class="projects-items__description--title">Технокряк</h3>
@@ -98,11 +166,19 @@
                 <li class="projects-items">
                     <div class="box">
                         <p class="overlay"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, quibusdam. Dolor adipisci vitae eligendi perspiciatis quidem. Doloribus, eum non inventore perferendis asperiores illo voluptate! Nihil, cum! Veritatis nesciunt similique eligendi.</p>
-                        <img 
-                        class="projects-img"
-                        src="./images/imgportpholio/project2.jpg"
-                        alt="Постер"
-                        width="370"/>
+                        <picture>
+                            <source srcset="./images/imgportpholio/desktop/dt@1x-1.jpg    1x,
+                            ./images/imgportpholio/desktop/dt@2x-1.jpg 2x
+                                " media="(min-width:1200px)" type="image/jpg" />
+                            <source srcset="./images/imgportpholio/tablet/tb@1x-1.jpg    1x,
+                            ./images/imgportpholio/tablet/tb@2x-1.jpg 2x
+                                " media="(min-width:768px)" type="image/jpg" />
+                            <source srcset="./images/imgportpholio/mobile/mb@1x-1.jpg    1x,
+                            ./images/imgportpholio/mobile/mb@2x-1.jpg 2x
+                                " media="(max-width:767px)" type="image/jpg" />
+                            <img src="./images/imgportpholio/mobile/mb@1x-1.jpg" alt="UI Designer" width="450"
+                                height="294" loading="lazy" />
+                        </picture>
                     </div>
                     <div class="projects-items__description">
                         <h3 class="projects-items__description--title">
@@ -114,10 +190,19 @@
                 <li class="projects-items">
                     <div class="box">
                         <p class="overlay"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, quibusdam. Dolor adipisci vitae eligendi perspiciatis quidem. Doloribus, eum non inventore perferendis asperiores illo voluptate! Nihil, cum! Veritatis nesciunt similique eligendi.</p>
-                        <img class="projects-img"
-                        src="./images/imgportpholio/project3.jpg"
-                        alt="Ресторан"
-                        width="370"/>
+                        <picture>
+                            <source srcset="./images/imgportpholio/desktop/dt@1x-2.jpg    1x,
+                            ./images/imgportpholio/desktop/dt@2x-2.jpg 2x
+                                " media="(min-width:1200px)" type="image/jpg" />
+                            <source srcset="./images/imgportpholio/tablet/tb@1x-2.jpg    1x,
+                            ./images/imgportpholio/tablet/tb@2x-2.jpg 2x
+                                " media="(min-width:768px)" type="image/jpg" />
+                            <source srcset="./images/imgportpholio/mobile/mb@1x-2.jpg    1x,
+                            ./images/imgportpholio/mobile/mb@2x-2.jpg 2x
+                                " media="(max-width:767px)" type="image/jpg" />
+                            <img src="./images/imgportpholio/mobile/mb@1x-2.jpg" alt="UI Designer" width="450"
+                                height="294" loading="lazy" />
+                        </picture>
                     </div>
                         <div class="projects-items__description">
                             <h3 class="projects-items__description--title">
@@ -128,11 +213,19 @@
                 <li class="projects-items">
                     <div class="box">
                         <p class="overlay"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, quibusdam. Dolor adipisci vitae eligendi perspiciatis quidem. Doloribus, eum non inventore perferendis asperiores illo voluptate! Nihil, cum! Veritatis nesciunt similique eligendi.</p>
-                        <img 
-                        class="projects-img"
-                        src="./images/imgportpholio/project4.jpg"
-                        alt="Проект"
-                        width="370"/>
+                        <picture>
+                            <source srcset="./images/imgportpholio/desktop/dt@1x-3.jpg    1x,
+                            ./images/imgportpholio/desktop/dt@2x-3.jpg 2x
+                                " media="(min-width:1200px)" type="image/jpg" />
+                            <source srcset="./images/imgportpholio/tablet/tb@1x-3.jpg    1x,
+                            ./images/imgportpholio/tablet/tb@2x-3.jpg 2x
+                                " media="(min-width:768px)" type="image/jpg" />
+                            <source srcset="./images/imgportpholio/mobile/mb@1x-3.jpg    1x,
+                            ./images/imgportpholio/mobile/mb@2x-3.jpg 2x
+                                " media="(max-width:767px)" type="image/jpg" />
+                            <img src="./images/imgportpholio/mobile/mb@1x-3.jpg" alt="UI Designer" width="450"
+                                height="294" loading="lazy" />
+                        </picture>
                     </div>
                     <div class="projects-items__description">
                         <h3 class="projects-items__description--title">
@@ -144,11 +237,19 @@
                 <li class="projects-items">
                     <div class="box">
                         <p class="overlay"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, quibusdam. Dolor adipisci vitae eligendi perspiciatis quidem. Doloribus, eum non inventore perferendis asperiores illo voluptate! Nihil, cum! Veritatis nesciunt similique eligendi.</p>
-                        <img 
-                        class="projects-img"
-                        src="./images/imgportpholio/project5.jpg"
-                        alt="Проект"
-                        width="370"/>
+                            <picture>
+                            <source srcset="./images/imgportpholio/desktop/dt@1x-4.jpg    1x,
+                            ./images/imgportpholio/desktop/dt@2x-4.jpg 2x
+                                " media="(min-width:1200px)" type="image/jpg" />
+                            <source srcset="./images/imgportpholio/tablet/tb@1x-4.jpg    1x,
+                            ./images/imgportpholio/tablet/tb@2x-4.jpg 2x
+                                " media="(min-width:768px)" type="image/jpg" />
+                            <source srcset="./images/imgportpholio/mobile/mb@1x-4.jpg    1x,
+                            ./images/imgportpholio/mobile/mb@2x-4.jpg 2x
+                                " media="(max-width:767px)" type="image/jpg" />
+                            <img src="./images/imgportpholio/mobile/mb@1x-4.jpg" alt="UI Designer" width="450"
+                                height="294" loading="lazy" />
+                        </picture>
                     </div>
                 <div class="projects-items__description">
                     <h3 class="projects-items__description--title">
@@ -160,11 +261,19 @@
                 <li class="projects-items">
                     <div class="box">
                         <p class="overlay"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, quibusdam. Dolor adipisci vitae eligendi perspiciatis quidem. Doloribus, eum non inventore perferendis asperiores illo voluptate! Nihil, cum! Veritatis nesciunt similique eligendi.</p>
-                        <img 
-                        class="projects-img"
-                        src="./images/imgportpholio/project6.jpg"
-                        alt="Inspiration"
-                        width="370"/>
+                        <picture>
+                            <source srcset="./images/imgportpholio/desktop/dt@1x-5.jpg    1x,
+                            ./images/imgportpholio/desktop/dt@2x-5.jpg 2x
+                                " media="(min-width:1200px)" type="image/jpg" />
+                            <source srcset="./images/imgportpholio/tablet/tb@1x-5.jpg    1x,
+                            ./images/imgportpholio/tablet/tb@2x-5.jpg 2x
+                                " media="(min-width:768px)" type="image/jpg" />
+                            <source srcset="./images/imgportpholio/mobile/mb@1x-5.jpg    1x,
+                            ./images/imgportpholio/mobile/mb@2x-5.jpg 2x
+                                " media="(max-width:767px)" type="image/jpg" />
+                            <img src="./images/imgportpholio/mobile/mb@1x-5.jpg" alt="UI Designer" width="450"
+                                height="294" loading="lazy" />
+                        </picture>
                     </div>
                     <div class="projects-items__description">
                         <h3 class="projects-items__description--title">
@@ -176,10 +285,19 @@
                 <li class="projects-items">
                     <div class="box">
                         <p class="overlay"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, quibusdam. Dolor adipisci vitae eligendi perspiciatis quidem. Doloribus, eum non inventore perferendis asperiores illo voluptate! Nihil, cum! Veritatis nesciunt similique eligendi.</p>
-                        <img 
-                            src="./images/imgportpholio/project7.jpg"
-                            alt="Издание"
-                            width="370"/>
+                            <picture>
+                            <source srcset="./images/imgportpholio/desktop/dt@1x-6.jpg    1x,
+                            ./images/imgportpholio/desktop/dt@2x-6.jpg 2x
+                                " media="(min-width:1200px)" type="image/jpg" />
+                            <source srcset="./images/imgportpholio/tablet/tb@1x-6.jpg    1x,
+                            ./images/imgportpholio/tablet/tb@2x-6.jpg 2x
+                                " media="(min-width:768px)" type="image/jpg" />
+                            <source srcset="./images/imgportpholio/mobile/mb@1x-6.jpg    1x,
+                            ./images/imgportpholio/mobile/mb@2x-6.jpg 2x
+                                " media="(max-width:767px)" type="image/jpg" />
+                            <img src="./images/imgportpholio/mobile/mb@1x-6.jpg" alt="UI Designer" width="450"
+                                height="294" loading="lazy" />
+                        </picture>
                     </div>
                     <div class="projects-items__description">
                         <h3 class="projects-items__description--title">
@@ -191,11 +309,19 @@
                     <li class="projects-items">
                         <div class="box">
                             <p class="overlay"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, quibusdam. Dolor adipisci vitae eligendi perspiciatis quidem. Doloribus, eum non inventore perferendis asperiores illo voluptate! Nihil, cum! Veritatis nesciunt similique eligendi.</p>
-                            <img 
-                            class="projects-img"
-                            src="./images/imgportpholio/project8.jpg"
-                            alt="Проект"
-                            width="370"/>
+                            <picture>
+                                <source srcset="./images/imgportpholio/desktop/dt@1x-7.jpg    1x,
+                                ./images/imgportpholio/desktop/dt@2x-7.jpg 2x
+                                    " media="(min-width:1200px)" type="image/jpg" />
+                                <source srcset="./images/imgportpholio/tablet/tb@1x-7.jpg    1x,
+                                ./images/imgportpholio/tablet/tb@2x-7.jpg 2x
+                                    " media="(min-width:768px)" type="image/jpg" />
+                                <source srcset="./images/imgportpholio/mobile/mb@1x-7.jpg    1x,
+                                ./images/imgportpholio/mobile/mb@2x-7.jpg 2x
+                                    " media="(max-width:767px)" type="image/jpg" />
+                                <img src="./images/imgportpholio/mobile/mb@1x-7.jpg" alt="UI Designer" width="450"
+                                    height="294" loading="lazy" />
+                            </picture>
                         </div>
                         <div class="projects-items__description">
                             <h3 class="projects-items__description--title">Проект <span lang="en">LAB</span></h3>
@@ -205,11 +331,19 @@
                     <li class="projects-items">
                         <div class="box">
                             <p class="overlay"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, quibusdam. Dolor adipisci vitae eligendi perspiciatis quidem. Doloribus, eum non inventore perferendis asperiores illo voluptate! Nihil, cum! Veritatis nesciunt similique eligendi.</p>
-                            <img 
-                            class="projects-img"
-                            src="./images/imgportpholio/project9.jpg"
-                            alt="Growing"
-                            width="370"/>
+                            <picture>
+                                <source srcset="./images/imgportpholio/desktop/dt@1x-8.jpg    1x,
+                                ./images/imgportpholio/desktop/dt@2x-8.jpg 2x
+                                    " media="(min-width:1200px)" type="image/jpg" />
+                                <source srcset="./images/imgportpholio/tablet/tb@1x-8.jpg    1x,
+                                ./images/imgportpholio/tablet/tb@2x-8.jpg 2x
+                                    " media="(min-width:768px)" type="image/jpg" />
+                                <source srcset="./images/imgportpholio/mobile/mb@1x-8.jpg    1x,
+                                ./images/imgportpholio/mobile/mb@2x-8.jpg 2x
+                                    " media="(max-width:767px)" type="image/jpg" />
+                                <img src="./images/imgportpholio/mobile/mb@1x-8.jpg" alt="UI Designer" width="450"
+                                    height="294" loading="lazy" />
+                            </picture>
                             </div>
                         <div class="projects-items__description">
                             <h3 class="projects-items__description--title">
@@ -224,87 +358,77 @@
     </main>
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer-container container">
-            <div class="footer-one">
-                <a href="index.html" 
-            class="logo-footer link">
-            <span class="web">Web</span><span class="third-web">Studio</span></a>
-            <address class="footer-address">
-            <ul class="footer-list list">
-                <li class="footer-item">
-                    <a class="footer-link link" href="/">г. Киев, пр-т Леси Украинки, 26</a>
-                </li>
-                <li class="footer-item">
-                    <a class="footer-second-link link" href="mailto:info@devstudio.com"
-                    >info@devstudio.com</a>
-                </li>
-                <li class="footer-item">
-                    <a class="footer-second-link link" href="tel:+380961111111">+38 096 111 11 11</a>
-                </li>
-            </ul>
-            </address>
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="./index.html" class="footer-logo link">Web<span class="footer-logo__white">Studio</span></a>
+                <address class="footer-address">
+                    <ul class="footer-list list">
+                        <li class="footer-item">
+                            <a class="footer-link link" href="/">г. Киев, пр-т Леси Украинки, 26</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-second-link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-second-link link" href="tel:+380961111111">+38 096 111 11 11</a>
+                        </li>
+                    </ul>
+                </address>
             </div>
-            <div class="fotter-social">
+            <div class="fotter-right">
                 <h3 class="join">Присоединяйтесь</h3>
-                <ul class="join__list list">
-                    <li class="join__item">
-                        <a href="" class="join__link">
-                            <svg class="join__link--icon" width="20" height="20">
-                            <use href="./icons.svg#icon-instagram-2"></use>
+                <ul class="join-list list">
+                    <li class="join-item">
+                        <a href="" class="join-link">
+                            <svg class="join-icon" width="20" height="20">
+                                <use href="./icons.svg#icon-instagram-2"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="join__item">
-                        <a href="" class="join__link">
-                            <svg class="join__link--icon" width="20" height="20">
-                            <use href="./icons.svg#icon-Vector"></use>
+                    <li class="join-item">
+                        <a href="" class="join-link">
+                            <svg class="join-icon" width="20" height="20">
+                                <use href="./icons.svg#icon-Vector"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="join__item">
-                        <a href="" class="join__link">
-                            <svg class="join__link--icon" width="20" height="20">
-                            <use href="./icons.svg#icon-facebook"></use>
+                    <li class="join-item">
+                        <a href="" class="join-link">
+                            <svg class="join-icon" width="20" height="20">
+                                <use href="./icons.svg#icon-facebook"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="join__item">
-                        <a href="" class="join__link">
-                            <svg class="join__link--icon" width="20" height="20">
-                            <use href="./icons.svg#icon-linkedin-1"></use>
+                    <li class="join-item">
+                        <a href="" class="join-link">
+                            <svg class="join-icon" width="20" height="20">
+                                <use href="./icons.svg#icon-linkedin-1"></use>
                             </svg>
                         </a>
                     </li>
                 </ul>
             </div>
-            <!-- FOOTER SUBSCRIBE -->
             <div class="subscribe-footer">
-                <h3 class="subscribe-footer__title">Подпишитесь на рассылку</h3>
-                <div class="subscribe-footer__section">
-                    <form class="subscribe-footer__form" name="e-mail">
-                        <div>
-                            <lable class="subscribe-footer__lable" for="email">
-                                <input
-                                    class="subscribe-footer__lable--input"
-                                    type="email"
-                                    name="e-mail"
-                                    title="i@i.ua"
-                                    pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
-                                    placeholder="E-mail"
-                                />
-                            </lable>
+                <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+                <div class="subscribe-footer-section">
+                    <form class="subscribe-form" name="e-mail">
+                        <div class="subscribe-lable">
+                            <input class="subscribe-input" type="email" name="e-mail" placeholder="E-mail" />
                         </div>
                     </form>
-                    <button type="button" class="btn subscribe-button">Подписаться
-                            <svg class="icon-send" width="24px" height="24px">
-                                <use
-                                    href="./icons.svg#icon-icon-send"
-                                ></use>
-                            </svg>
+                    <button type="button" class="subscribe-button">
+                        Подписаться
+                        <svg class="icon-send" width="24" height="24">
+                            <use href="./icons.svg#icon-icon-send"></use>
+                        </svg>
                     </button>
                 </div>
             </div>
         </div>
-        </footer>
+    </footer>
+    <!-- end of footer section -->
+    <!-- script section -->
+    <script src="./js/mob-menu.js"></script>
+    <!-- end of script section -->
 </body>
 </html>

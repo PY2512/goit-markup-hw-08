@@ -2,43 +2,96 @@
     background-color: #2f303a;
     padding-top: 60px;
     padding-bottom: 60px;
+
+    @include mq (mobile) {
+        text-align: center;
+    }
 }
-.footer-one {
-    padding-right: 70px;
+
+.footer-container {
+    display: block;
+    align-items: baseline;
+    justify-content: center;
+
+    @include mq (mobile-only) {
+        flex-direction: column;
+        align-items: center;
+    }
+    @include mq (tablet-only) {
+        display: flex;
+        width: 768px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: row;
+        text-align: center;
+    }
+    @include mq (desktop) {
+        display: flex;
+        justify-content: flex-start;
+    }
 }
+
 .footer-address {
     font-style: inherit;
 }
+
 .footer-item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+    @include mq (desktop) {
+        margin-bottom: 9px;
+        display: flex;
+        align-items: left;
+        
+    }
 }
 .footer-link {
     font-weight: normal;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color:var(--header-color);
+    color: #ffffff;
 }
+
 .footer-second-link {
     font-weight: normal;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
     &:focus {
         color: var(--accent-color);
     }
+    @include mq (desktop) {
+		display: flex;
+		align-items: left;
+	}
 }
 
-.footer-one-container,
-.footer-container{
-    display: flex;
-    align-items: baseline;
+.footer-logo {
+    @media screen and (max-width: 767px) {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+.fotter-right {
+    @include mq (mobile-only) {
+        margin-top: 60px;
+    }
+
+    @media screen and (max-width: 1199px) {
+        display: block;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    @media screen and (min-width: 1200px) {
+        
+        margin-left: 70px;
+    }
 }
 
-.footer-social{
-    margin-left: 70px;
-}

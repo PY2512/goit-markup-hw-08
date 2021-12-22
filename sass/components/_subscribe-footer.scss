@@ -1,10 +1,19 @@
 .subscribe-footer {
-	display: block;
-	align-items: baseline;
-	margin-left: 93px;
+	align-items: center;
+	justify-content: center;
+
+	@include mq (tablet-only){
+		margin-top: 60px;
+	}
+
+	@include mq (desktop) {
+		// display: block;
+		align-items: baseline;
+		margin-left: 93px;
+	}
 }
 
-.subscribe-footer__title {
+.subscribe-title {
 	font-style: normal;
 	font-weight: 500;
 	font-size: 14px;
@@ -12,26 +21,63 @@
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 	color: #ffffff;
+
 	margin-bottom: 20px;
+	@include mq (desktop) {
+		display: flex;
+		align-items: left;
+	}
 }
 
-.subscribe-footer__section {
-	display: flex;
+.subscribe-footer-section {
+	@include mq (desktop) {
+		display: flex;
+	}
 }
-
-.subscribe-footer__form {
-	margin-right: 12px;
+.subscribe-form {
+	@include mq (desktop) {
+		margin-right: 12px;
+	}
 }
-
-.subscribe-footer__lable--input {
+.subscribe-input {
 	padding: 10px;
 	width: 100%;
-	width: 358px;
 	height: 50px;
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	border-radius: 4px;
 	background-color: inherit;
 	color: #ffffff;
+	margin-bottom: 20px;
+
+	@include mq (tablet) {
+		display: block;
+		width: 450px;
+		margin: 0 auto 20px;
+	}
+
+	@include mq (desktop) {
+		width: 358px;
+	}
+}
+.subscribe-button {
+	display: flex;
+	align-items: center;
+	min-width: 200px;
+	height: 50px;
+	padding: 10px 32px;
+	border-radius: 4px;
+	border-color: transparent;
+	font-size: 16px;
+	line-height: 1.9;
+	letter-spacing: 0.06em;
+	color: #ffffff;
+	background-color: var(--accent-color);
+	cursor: pointer;
+	@include mq (not-desktop) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
 }
 
 .icon-send {

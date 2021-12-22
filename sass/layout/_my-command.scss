@@ -1,49 +1,73 @@
-.team{
-    background-color: var(--button-color);
-    padding-top: 94px;
-    padding-bottom: 94px;
+.team {
+    background-color: #f5f4fa;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include mq (desktop) {
+        background-color: #f5f4fa;
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
-.team__item--img{
-    width: 270px;
-}
-.team__title {
+
+.team-title {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
+    font-size: 28px;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    @include mq (desktop) {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
 }
-.team__list{
+
+.team-list {
     display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+
+    @include mq (desktop) {
+        display: flex;
+    }
 }
-.team__item{
-    margin-right: 30px;
-    background: #FFFFFF;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
-    0px 1px 1px rgba(0, 0, 0, 0.14), 
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+.team-item {
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    margin: 15px;
+
+    @include mq (tablet-only) {
+        width: calc((100% - 2 * 30px) / 2);
+    }
+
+    @include mq (desktop) {
+        flex-basis: calc(100% / 4 - 30px);
+    }
 }
-.team-after__item--name {
+
+.team-name {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em;
-    color: var(--primary-text-color);
     text-align: center;
-    margin-bottom: 10px;
+    color: var(--primary-text-color);
+    padding-bottom: 10px;
 }
-.team-after__item {
+.team-after-item {
     padding-bottom: 30px;
-    padding-top: 29px;
+    padding-top: 30px;
 }
-.team-after__item--prof{
+.team-prof {
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em;
-    color: var(--second-text-color);
     text-align: center;
+    color: var(--second-text-color);
     margin-bottom: 16px;
 }
