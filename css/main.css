@@ -1190,11 +1190,11 @@ img {
 
 @media (min-width: 1200px) {
   .hero-top {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/imgsite/desktop/Img-hero-dt@1x.jpg);
     height: 600px;
     max-width: 1600px;
     padding-bottom: 200px;
     padding-top: 110px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/imgsite/desktop/Img-hero-dt@1x.jpg);
   }
 }
 
