@@ -1706,7 +1706,7 @@ img {
 @media (min-width: 480px) {
   .projects-items {
     display: block;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 }
 

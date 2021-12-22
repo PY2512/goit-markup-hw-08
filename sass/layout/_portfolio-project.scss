@@ -79,7 +79,7 @@
 .projects-items {
     @include mq(mobile) {
         display: block;
-        padding-bottom: 30px;
+        margin-bottom: 30px;
     }
 
     @include mq(tablet) {
