@@ -12,13 +12,24 @@
 }
 
 .modal{
-    width: 528px;
-    height: 581px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     position: relative;
     padding: 40px;
+    @include mq (mobile) {
+        width: 450px;
+        height: 609px;
+    }
+    @include mq (tablet) {
+        width: 450px;
+        height: 609px;
+    }
+    @include mq (desktop) {
+        width: 528px;
+        height: 581px;
+    }
+
 }
 
 .is-hidden{
@@ -115,10 +126,19 @@
 
 .check-text{
     padding-left: 12px;
-    font-size: 14px;
     color: #757575;
     display: flex;
     align-items: center;
+    @include mq (mobile) {
+        font-size: 12px;
+    }
+    @include mq (tablet) {
+        font-size: 12px;
+    }
+    @include mq (desktop) {
+        font-size: 14px;
+    }
+    
 }
 
 .check-text span{

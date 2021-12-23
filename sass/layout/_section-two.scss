@@ -40,6 +40,9 @@
     @include mq (mobile) {
         text-align: center;
     }
+    @include mq (tablet) {
+        text-align: left;
+    }
     @include mq (desktop) {
         text-align: left;
     }

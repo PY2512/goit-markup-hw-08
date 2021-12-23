@@ -10,7 +10,7 @@
         margin-right: 44px;
     }
         @include mq(desktop) {
-    margin-right: 93px;
+    // margin-right: 93px;
     font-size: 26px;
     line-height: 1.19;
 }

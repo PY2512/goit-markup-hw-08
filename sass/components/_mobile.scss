@@ -4,9 +4,9 @@
     border: none;
     padding: 0;
     line-height: 0;
-    position: absolute;
-    top: 21px;
-    right: 15px;
+    // position: absolute;
+    // top: 21px;
+    // right: 15px;
     @include mq (tablet) {
         display: none;
     }
