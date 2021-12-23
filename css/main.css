@@ -509,13 +509,13 @@ img {
 
 @media (min-width: 480px) {
   .modal__form-btn {
-    margin-left: 95px;
+    margin-left: 90px;
   }
 }
 
 @media (min-width: 768px) {
   .modal__form-btn {
-    margin-left: 95px;
+    margin-left: 90px;
   }
 }
 
@@ -1662,7 +1662,6 @@ img {
 .projects-list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 30px;
   margin-bottom: -30px;
 }
 

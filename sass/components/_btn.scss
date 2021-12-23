@@ -99,11 +99,11 @@
     cursor: pointer;
 
     @include mq(mobile) {
-        margin-left: 95px;;
+        margin-left: 90px;;
     }
 
     @include mq(tablet) {
-        margin-left: 95px;
+        margin-left: 90px;
     }
 
     @include mq(desktop) {
@@ -117,6 +117,3 @@
     
 }
 
-// .modal-field {
-//     // margin-bottom: 15px;
-// }
