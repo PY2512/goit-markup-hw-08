@@ -26,7 +26,9 @@
 
     @include mq (desktop) {
         flex-basis: calc(100% / 4 - 30px);
+        margin-bottom: -30px;
     }
+    
 }
 
 .text-name {
@@ -37,6 +39,9 @@
     color: var(--primary-text-color);
     @include mq (mobile) {
         text-align: center;
+    }
+    @include mq (desktop) {
+        text-align: left;
     }
 }
 

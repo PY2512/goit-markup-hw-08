@@ -7,7 +7,7 @@
     @include mq(mobile) {
         display: flex;
         flex-wrap: wrap;
-        padding-top: 15px;
+        // padding-top: 15px;
     }
 
     @include mq(tablet) {
