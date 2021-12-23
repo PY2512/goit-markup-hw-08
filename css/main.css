@@ -529,10 +529,6 @@ img {
   background-color: #188ce8;
 }
 
-.modal-field {
-  margin-bottom: 15px;
-}
-
 .footer {
   background-color: #2f303a;
   padding-top: 60px;
@@ -1220,7 +1216,7 @@ img {
 
 @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero-top {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../images/imgsite/mobile/Header-img@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../../images/imgsite/mobile/Header-img@2x.jpg);
   }
 }
 
@@ -1277,7 +1273,6 @@ img {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    margin-bottom: 1px;
   }
 }
 
